@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// creating the product schema
+// creating the product schema..................
 const productSchema = new mongoose.Schema({
     name: String,
     qty: Number
@@ -8,7 +8,8 @@ const productSchema = new mongoose.Schema({
     versionKey: false
 });
 
-// creating a new model called "Product"
+// creating a new model called "Product".................
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;
+// ....................................
