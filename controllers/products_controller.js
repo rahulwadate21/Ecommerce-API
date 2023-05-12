@@ -1,6 +1,6 @@
 const Product = require('../models/product');
 
-// function to show all the products
+// function to show all the products.............
 module.exports.products = function(req, res){
     Product.find({}, function(err, foundProducts){
         if(err){
@@ -11,7 +11,7 @@ module.exports.products = function(req, res){
     });
 }
 
-// function to create a new product
+// function to create a new product........
 module.exports.create = function(req, res){
     const newProduct = new Product({
         name: req.body.name,
@@ -41,7 +41,7 @@ module.exports.delete = function(req, res){
         });
 }
 
-// function to update a product's quantity
+// function to update a product's quantity........
 module.exports.updateQunatity = function(req, res){
     const ID = req.params.productID;
     // find the product using id
@@ -51,7 +51,7 @@ module.exports.updateQunatity = function(req, res){
         }else{
 
             // Note - To increment the quantity of the product put number as a positive value in the query 
-            //        and to decrement the quantity put the number as negative value in the query
+            //and to decrement the quantity put the number as negative value in the query-----------
 
             const newQty = parseInt(found.qty) + parseInt(req.query.number);
             // update the product's quantity
